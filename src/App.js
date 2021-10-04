@@ -17,11 +17,9 @@ class App extends Component {
     bad: 0,
   }
   
-  onFeedbackButtonClick = (event) => {
-    const key = event.target.innerText.toLowerCase();
-
+  onFeedbackButtonClick = response => {
     this.setState(previousState => {
-      return {[key]: previousState[key] + 1}
+      return {[response]: previousState[response] + 1}
     });
   }
 
